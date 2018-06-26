@@ -537,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7BTDY34B5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -595,6 +596,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = B7BTDY34B5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -647,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7BTDY34B5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TDFWXAutoGrapRedEnvelope/Info.plist;
 				MONKEYDEV_ADD_SUBSTRATE = YES;
@@ -656,7 +659,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = tangdanfeng.TDFWXAutoGrapRedEnvelope;
+				PRODUCT_BUNDLE_IDENTIFIER = com.honglu.TDFWXAutoGrapRedEnvelope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -666,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7BTDY34B5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TDFWXAutoGrapRedEnvelope/Info.plist;
 				MONKEYDEV_ADD_SUBSTRATE = YES;
@@ -675,7 +679,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = tangdanfeng.TDFWXAutoGrapRedEnvelope;
+				PRODUCT_BUNDLE_IDENTIFIER = com.honglu.TDFWXAutoGrapRedEnvelope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
