@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C25834D220E2940500687A16 /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C25834D120E2940500687A16 /* MDConfig.plist */; };
+		C25834DC20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25834DB20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C25834E120E2940500687A16 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25834E020E2940500687A16 /* JavaScriptCore.framework */; };
+		C25834E320E2940500687A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25834E220E2940500687A16 /* Foundation.framework */; };
+		C25834E520E2940500687A16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25834E420E2940500687A16 /* UIKit.framework */; };
+		C25834EA20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = C25834E920E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm */; };
+		C25834ED20E2940500687A16 /* MDConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C25834EC20E2940500687A16 /* MDConfigManager.h */; };
+		C25834EF20E2940500687A16 /* MDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C25834EE20E2940500687A16 /* MDConfigManager.m */; };
+		C25834F120E2940500687A16 /* MDCycriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C25834F020E2940500687A16 /* MDCycriptManager.h */; };
+		C25834F320E2940500687A16 /* MDCycriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C25834F220E2940500687A16 /* MDCycriptManager.m */; };
+		C25834F520E2940500687A16 /* MDMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = C25834F420E2940500687A16 /* MDMethodTrace.h */; };
+		C25834F720E2940500687A16 /* MDMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = C25834F620E2940500687A16 /* MDMethodTrace.m */; };
+		C25834F920E2940500687A16 /* ANYMethodLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C25834F820E2940500687A16 /* ANYMethodLog.h */; };
+		C25834FB20E2940500687A16 /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C25834FA20E2940500687A16 /* ANYMethodLog.m */; };
+		C25834FE20E2940500687A16 /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = C25834FD20E2940500687A16 /* LLDBTools.h */; };
+		C258350020E2940500687A16 /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = C25834FF20E2940500687A16 /* LLDBTools.mm */; };
+		C258350520E2940500687A16 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = C258350420E2940500687A16 /* AntiAntiDebug.m */; };
+		C258350820E2940500687A16 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C258350720E2940500687A16 /* fishhook.c */; };
+		C258350A20E2940500687A16 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = C258350920E2940500687A16 /* fishhook.h */; };
+		C258350C20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = C258350B20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h */; };
+		C258350E20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = C258350D20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C25834DD20E2940500687A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C25834BE20E2940500687A16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C25834DA20E2940500687A16;
+			remoteInfo = TDFWXAutoGrapRedEnvelopeDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C25834C620E2940500687A16 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C25834DC20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C25834C920E2940500687A16 /* TDFWXAutoGrapRedEnvelope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDFWXAutoGrapRedEnvelope.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25834CC20E2940500687A16 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C25834CD20E2940500687A16 /* Target.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Target.plist; sourceTree = "<group>"; };
+		C25834CF20E2940500687A16 /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "quick-resign.sh"; path = "Scripts/quick-resign.sh"; sourceTree = "<group>"; };
+		C25834D120E2940500687A16 /* MDConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MDConfig.plist; path = Config/MDConfig.plist; sourceTree = "<group>"; };
+		C25834D420E2940500687A16 /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; name = "put ipa or app here"; path = "TargetApp/put ipa or app here"; sourceTree = "<group>"; };
+		C25834D520E2940500687A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C25834DB20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libTDFWXAutoGrapRedEnvelopeDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25834E020E2940500687A16 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C25834E220E2940500687A16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C25834E420E2940500687A16 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C25834E820E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = TDFWXAutoGrapRedEnvelopeDylib.xm; path = Logos/TDFWXAutoGrapRedEnvelopeDylib.xm; sourceTree = "<group>"; };
+		C25834E920E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = TDFWXAutoGrapRedEnvelopeDylib.mm; path = Logos/TDFWXAutoGrapRedEnvelopeDylib.mm; sourceTree = "<group>"; };
+		C25834EC20E2940500687A16 /* MDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MDConfigManager.h; path = Config/MDConfigManager.h; sourceTree = "<group>"; };
+		C25834EE20E2940500687A16 /* MDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MDConfigManager.m; path = Config/MDConfigManager.m; sourceTree = "<group>"; };
+		C25834F020E2940500687A16 /* MDCycriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MDCycriptManager.h; path = Config/MDCycriptManager.h; sourceTree = "<group>"; };
+		C25834F220E2940500687A16 /* MDCycriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MDCycriptManager.m; path = Config/MDCycriptManager.m; sourceTree = "<group>"; };
+		C25834F420E2940500687A16 /* MDMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MDMethodTrace.h; path = Config/MDMethodTrace.h; sourceTree = "<group>"; };
+		C25834F620E2940500687A16 /* MDMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MDMethodTrace.m; path = Config/MDMethodTrace.m; sourceTree = "<group>"; };
+		C25834F820E2940500687A16 /* ANYMethodLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = Config/ANYMethodLog.h; sourceTree = "<group>"; };
+		C25834FA20E2940500687A16 /* ANYMethodLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = Config/ANYMethodLog.m; sourceTree = "<group>"; };
+		C25834FD20E2940500687A16 /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LLDBTools.h; path = Tools/LLDBTools.h; sourceTree = "<group>"; };
+		C25834FF20E2940500687A16 /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = LLDBTools.mm; path = Tools/LLDBTools.mm; sourceTree = "<group>"; };
+		C258350220E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TDFWXAutoGrapRedEnvelopeDylib-Prefix.pch"; sourceTree = "<group>"; };
+		C258350420E2940500687A16 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
+		C258350720E2940500687A16 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
+		C258350920E2940500687A16 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
+		C258350B20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDFWXAutoGrapRedEnvelopeDylib.h; sourceTree = "<group>"; };
+		C258350D20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDFWXAutoGrapRedEnvelopeDylib.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C25834C320E2940500687A16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25834D820E2940500687A16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25834E120E2940500687A16 /* JavaScriptCore.framework in Frameworks */,
+				C25834E520E2940500687A16 /* UIKit.framework in Frameworks */,
+				C25834E320E2940500687A16 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C25834BD20E2940500687A16 = {
+			isa = PBXGroup;
+			children = (
+				C25834CB20E2940500687A16 /* TDFWXAutoGrapRedEnvelope */,
+				C25834E620E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib */,
+				C25834DF20E2940500687A16 /* Frameworks */,
+				C25834CA20E2940500687A16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C25834CA20E2940500687A16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C25834C920E2940500687A16 /* TDFWXAutoGrapRedEnvelope.app */,
+				C25834DB20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C25834CB20E2940500687A16 /* TDFWXAutoGrapRedEnvelope */ = {
+			isa = PBXGroup;
+			children = (
+				C25834CC20E2940500687A16 /* icon.png */,
+				C25834CD20E2940500687A16 /* Target.plist */,
+				C25834D520E2940500687A16 /* Info.plist */,
+				C25834CE20E2940500687A16 /* Scripts */,
+				C25834D020E2940500687A16 /* Config */,
+				C25834D320E2940500687A16 /* TargetApp */,
+			);
+			path = TDFWXAutoGrapRedEnvelope;
+			sourceTree = "<group>";
+		};
+		C25834CE20E2940500687A16 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				C25834CF20E2940500687A16 /* quick-resign.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		C25834D020E2940500687A16 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C25834D120E2940500687A16 /* MDConfig.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		C25834D320E2940500687A16 /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				C25834D420E2940500687A16 /* put ipa or app here */,
+			);
+			name = TargetApp;
+			sourceTree = "<group>";
+		};
+		C25834DF20E2940500687A16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C25834E020E2940500687A16 /* JavaScriptCore.framework */,
+				C25834E220E2940500687A16 /* Foundation.framework */,
+				C25834E420E2940500687A16 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C25834E620E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib */ = {
+			isa = PBXGroup;
+			children = (
+				C258350B20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h */,
+				C258350D20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m */,
+				C25834E720E2940500687A16 /* Logos */,
+				C25834EB20E2940500687A16 /* Config */,
+				C25834FC20E2940500687A16 /* Tools */,
+				C258350320E2940500687A16 /* AntiAntiDebug */,
+				C258350620E2940500687A16 /* fishhook */,
+				C258350120E2940500687A16 /* Supporting Files */,
+			);
+			path = TDFWXAutoGrapRedEnvelopeDylib;
+			sourceTree = "<group>";
+		};
+		C25834E720E2940500687A16 /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				C25834E820E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.xm */,
+				C25834E920E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm */,
+			);
+			name = Logos;
+			sourceTree = "<group>";
+		};
+		C25834EB20E2940500687A16 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C25834EC20E2940500687A16 /* MDConfigManager.h */,
+				C25834EE20E2940500687A16 /* MDConfigManager.m */,
+				C25834F020E2940500687A16 /* MDCycriptManager.h */,
+				C25834F220E2940500687A16 /* MDCycriptManager.m */,
+				C25834F420E2940500687A16 /* MDMethodTrace.h */,
+				C25834F620E2940500687A16 /* MDMethodTrace.m */,
+				C25834F820E2940500687A16 /* ANYMethodLog.h */,
+				C25834FA20E2940500687A16 /* ANYMethodLog.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		C25834FC20E2940500687A16 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C25834FD20E2940500687A16 /* LLDBTools.h */,
+				C25834FF20E2940500687A16 /* LLDBTools.mm */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		C258350120E2940500687A16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C258350220E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C258350320E2940500687A16 /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				C258350420E2940500687A16 /* AntiAntiDebug.m */,
+			);
+			name = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		C258350620E2940500687A16 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				C258350720E2940500687A16 /* fishhook.c */,
+				C258350920E2940500687A16 /* fishhook.h */,
+			);
+			name = fishhook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C25834D920E2940500687A16 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25834F120E2940500687A16 /* MDCycriptManager.h in Headers */,
+				C25834F520E2940500687A16 /* MDMethodTrace.h in Headers */,
+				C25834FE20E2940500687A16 /* LLDBTools.h in Headers */,
+				C25834ED20E2940500687A16 /* MDConfigManager.h in Headers */,
+				C258350C20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h in Headers */,
+				C25834F920E2940500687A16 /* ANYMethodLog.h in Headers */,
+				C258350A20E2940500687A16 /* fishhook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C25834C820E2940500687A16 /* TDFWXAutoGrapRedEnvelope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C258351420E2940500687A16 /* Build configuration list for PBXNativeTarget "TDFWXAutoGrapRedEnvelope" */;
+			buildPhases = (
+				C25834C220E2940500687A16 /* Sources */,
+				C25834C320E2940500687A16 /* Frameworks */,
+				C25834C420E2940500687A16 /* ShellScript */,
+				C25834C520E2940500687A16 /* Resources */,
+				C25834C620E2940500687A16 /* CopyFiles */,
+				C25834C720E2940500687A16 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C25834DE20E2940500687A16 /* PBXTargetDependency */,
+			);
+			name = TDFWXAutoGrapRedEnvelope;
+			productName = TDFWXAutoGrapRedEnvelope;
+			productReference = C25834C920E2940500687A16 /* TDFWXAutoGrapRedEnvelope.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C25834DA20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C258351120E2940500687A16 /* Build configuration list for PBXNativeTarget "TDFWXAutoGrapRedEnvelopeDylib" */;
+			buildPhases = (
+				C25834D620E2940500687A16 /* ShellScript */,
+				C25834D720E2940500687A16 /* Sources */,
+				C25834D820E2940500687A16 /* Frameworks */,
+				C25834D920E2940500687A16 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDFWXAutoGrapRedEnvelopeDylib;
+			productName = TDFWXAutoGrapRedEnvelopeDylib;
+			productReference = C25834DB20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C25834BE20E2940500687A16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = tangdanfeng;
+				TargetAttributes = {
+					C25834C820E2940500687A16 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					C25834DA20E2940500687A16 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C25834C120E2940500687A16 /* Build configuration list for PBXProject "TDFWXAutoGrapRedEnvelope" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C25834BD20E2940500687A16;
+			productRefGroup = C25834CA20E2940500687A16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C25834C820E2940500687A16 /* TDFWXAutoGrapRedEnvelope */,
+				C25834DA20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C25834C520E2940500687A16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25834D220E2940500687A16 /* MDConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C25834C420E2940500687A16 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+		};
+		C25834C720E2940500687A16 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+		};
+		C25834D620E2940500687A16 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C25834C220E2940500687A16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25834D720E2940500687A16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25834F320E2940500687A16 /* MDCycriptManager.m in Sources */,
+				C25834FB20E2940500687A16 /* ANYMethodLog.m in Sources */,
+				C25834EF20E2940500687A16 /* MDConfigManager.m in Sources */,
+				C258350020E2940500687A16 /* LLDBTools.mm in Sources */,
+				C25834EA20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm in Sources */,
+				C258350E20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m in Sources */,
+				C25834F720E2940500687A16 /* MDMethodTrace.m in Sources */,
+				C258350820E2940500687A16 /* fishhook.c in Sources */,
+				C258350520E2940500687A16 /* AntiAntiDebug.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C25834DE20E2940500687A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C25834DA20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib */;
+			targetProxy = C25834DD20E2940500687A16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C258350F20E2940500687A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C258351020E2940500687A16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C258351220E2940500687A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDFWXAutoGrapRedEnvelopeDylib/TDFWXAutoGrapRedEnvelopeDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libTDFWXAutoGrapRedEnvelopeDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"TDFWXAutoGrapRedEnvelopeDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-lcycript",
+					"-framework",
+					RevealServer,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		C258351320E2940500687A16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDFWXAutoGrapRedEnvelopeDylib/TDFWXAutoGrapRedEnvelopeDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libTDFWXAutoGrapRedEnvelopeDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"TDFWXAutoGrapRedEnvelopeDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C258351520E2940500687A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = TDFWXAutoGrapRedEnvelope/Info.plist;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = tangdanfeng.TDFWXAutoGrapRedEnvelope;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C258351620E2940500687A16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = TDFWXAutoGrapRedEnvelope/Info.plist;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = tangdanfeng.TDFWXAutoGrapRedEnvelope;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C25834C120E2940500687A16 /* Build configuration list for PBXProject "TDFWXAutoGrapRedEnvelope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C258350F20E2940500687A16 /* Debug */,
+				C258351020E2940500687A16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C258351120E2940500687A16 /* Build configuration list for PBXNativeTarget "TDFWXAutoGrapRedEnvelopeDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C258351220E2940500687A16 /* Debug */,
+				C258351320E2940500687A16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C258351420E2940500687A16 /* Build configuration list for PBXNativeTarget "TDFWXAutoGrapRedEnvelope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C258351520E2940500687A16 /* Debug */,
+				C258351620E2940500687A16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C25834BE20E2940500687A16 /* Project object */;
+}
