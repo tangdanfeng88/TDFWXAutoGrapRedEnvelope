@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21700AB20E521C300FF0BE0 /* TDFSettingCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = C21700AA20E521C300FF0BE0 /* TDFSettingCell.mm */; };
 		C25834D220E2940500687A16 /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C25834D120E2940500687A16 /* MDConfig.plist */; };
 		C25834DC20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25834DB20E2940500687A16 /* libTDFWXAutoGrapRedEnvelopeDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C25834E120E2940500687A16 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25834E020E2940500687A16 /* JavaScriptCore.framework */; };
@@ -54,6 +55,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C21700A920E521AC00FF0BE0 /* TDFSettingCell.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TDFSettingCell.xm; sourceTree = "<group>"; };
+		C21700AA20E521C300FF0BE0 /* TDFSettingCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TDFSettingCell.mm; sourceTree = "<group>"; };
+		C21700AC20E535DD00FF0BE0 /* TDFWeChatHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDFWeChatHeader.h; sourceTree = "<group>"; };
 		C25834C920E2940500687A16 /* TDFWXAutoGrapRedEnvelope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDFWXAutoGrapRedEnvelope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25834CC20E2940500687A16 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C25834CD20E2940500687A16 /* Target.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Target.plist; sourceTree = "<group>"; };
@@ -192,6 +196,9 @@
 			children = (
 				C25834E820E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.xm */,
 				C25834E920E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm */,
+				C21700AC20E535DD00FF0BE0 /* TDFWeChatHeader.h */,
+				C21700A920E521AC00FF0BE0 /* TDFSettingCell.xm */,
+				C21700AA20E521C300FF0BE0 /* TDFSettingCell.mm */,
 			);
 			name = Logos;
 			sourceTree = "<group>";
@@ -415,6 +422,7 @@
 				C25834F720E2940500687A16 /* MDMethodTrace.m in Sources */,
 				C258350820E2940500687A16 /* fishhook.c in Sources */,
 				C258350520E2940500687A16 /* AntiAntiDebug.m in Sources */,
+				C21700AB20E521C300FF0BE0 /* TDFSettingCell.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
