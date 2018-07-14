@@ -29,6 +29,7 @@
 		C258350A20E2940500687A16 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = C258350920E2940500687A16 /* fishhook.h */; };
 		C258350C20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = C258350B20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h */; };
 		C258350E20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = C258350D20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m */; };
+		C2876DAE20F9EB8B0020140D /* AutoGrabRedEnvelops.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2876DAD20F9EB8B0020140D /* AutoGrabRedEnvelops.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		C258350920E2940500687A16 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
 		C258350B20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDFWXAutoGrapRedEnvelopeDylib.h; sourceTree = "<group>"; };
 		C258350D20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDFWXAutoGrapRedEnvelopeDylib.m; sourceTree = "<group>"; };
+		C2876DAC20F9E9C40020140D /* AutoGrabRedEnvelops.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AutoGrabRedEnvelops.xm; sourceTree = "<group>"; };
+		C2876DAD20F9EB8B0020140D /* AutoGrabRedEnvelops.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AutoGrabRedEnvelops.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 				C21700AC20E535DD00FF0BE0 /* TDFWeChatHeader.h */,
 				C21700A920E521AC00FF0BE0 /* TDFSettingCell.xm */,
 				C21700AA20E521C300FF0BE0 /* TDFSettingCell.mm */,
+				C2876DAC20F9E9C40020140D /* AutoGrabRedEnvelops.xm */,
+				C2876DAD20F9EB8B0020140D /* AutoGrabRedEnvelops.mm */,
 			);
 			name = Logos;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				C25834F320E2940500687A16 /* MDCycriptManager.m in Sources */,
 				C25834FB20E2940500687A16 /* ANYMethodLog.m in Sources */,
 				C25834EF20E2940500687A16 /* MDConfigManager.m in Sources */,
+				C2876DAE20F9EB8B0020140D /* AutoGrabRedEnvelops.mm in Sources */,
 				C258350020E2940500687A16 /* LLDBTools.mm in Sources */,
 				C25834EA20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm in Sources */,
 				C258350E20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m in Sources */,
