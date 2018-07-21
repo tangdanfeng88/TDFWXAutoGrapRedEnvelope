@@ -56,10 +56,6 @@
 - (id)GetCurrentLogicController;
 @end
 
-@interface WCRedEnvelopesLogicMgr : NSObject
-- (void)OpenRedEnvelopesRequest:(id)dic;
-@end
-
 @interface WeixinContentLogicController : NSObject
 - (id)m_contact;
 @end
@@ -81,6 +77,28 @@
 @interface WCPayLogicMgr
 - (void)setRealnameReportScene:(unsigned int)arg1;
 - (void)checkHongbaoOpenLicense:(id)agr1 acceptCallback:(void(^)())agr2 denyCallback:(void(^)())agr3;
+@end
+
+@interface SKBuiltinBuffer_t
+@property (retain, nonatomic) NSData *buffer;
+@property (nonatomic) int iLen;
+@end
+
+@interface BaseResponse
+@property (nonatomic) int ret;
+@end
+
+@interface HongBaoRes
+@property (retain, nonatomic) BaseResponse *baseResponse;
+@property (retain, nonatomic) SKBuiltinBuffer_t *retText;
+@property (nonatomic) int cgiCmdid;
+
+@end
+
+@interface WCRedEnvelopesLogicMgr : NSObject
+- (void)OpenRedEnvelopesRequest:(id)dic;
+- (void)ReceiverQueryRedEnvelopesRequest:(id)arg1;
+- (void)OnWCToHongbaoCommonResponse:(HongBaoRes *)arg1 Request:(id)arg2;
 @end
 
 #endif /* TDFWeChatHeader_h */
