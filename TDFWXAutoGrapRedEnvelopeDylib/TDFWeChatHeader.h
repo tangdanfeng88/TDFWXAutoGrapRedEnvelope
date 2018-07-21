@@ -41,6 +41,7 @@
 
 @interface CMessageWrap : NSObject
 @property (retain, nonatomic) WCPayInfoItem *m_oWCPayInfoItem;
+@property (retain, nonatomic) NSString *m_nsFromUsr;
 @end
 
 @interface WCBizUtil : NSObject

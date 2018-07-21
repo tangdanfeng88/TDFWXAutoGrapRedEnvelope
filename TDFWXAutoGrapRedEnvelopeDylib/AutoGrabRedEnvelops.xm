@@ -1,4 +1,5 @@
 #import "TDFWeChatHeader.h"
+#import "WeChatRedEnvelopParamQueue.h"
 #import <UIKit/UIKit.h>
 
 
@@ -10,6 +11,7 @@
 //5.分析第一个核心参数CMessageWrap就是onNewSyncAddMessage:方法的形参。这个参数顺利解决。第三个参数其实不是必要的，不是调 开 红包接口需要拼接的参数，可以不考虑。
 //6.为了拿到最后一个核心参数，找到拆红包的方法，WCRedEnvelopesLogicMgr类的ReceiverQueryRedEnvelopesRequest:方法，调了拆红包的方法，会触发响应方法WCRedEnvelopesLogicMgr类OnWCToHongbaoCommonResponse: Request:。其实流程就是，红包来了，调用拆红包的接口，触发响应方法，拿到一些参数（里面就有我们前面需要的2个核心参数），然后用到这些参数去调用开红包的接口，就完成抢红包的过程了。
 //7.分析发现OnWCToHongbaoCommonResponse: Request:方法的第一个参数是HongBaoRes类型，里面包含一个SKBuiltinBuffer_t类型，SKBuiltinBuffer_t类有个buffer字段，buffer里面包含我们想要的timingIdentifier。因为只有在这个方法里面才能拿到timingIdentifier参数，所以要在之前的onNewSyncAddMessage:方法里面拼接的参数先保存起来，然后走到这个方法里面，加上timingIdentifier参数，一起拼接后调用开 红包的方法。
+//8.新增WeChatRedEnvelopParamQueue队列，保存要自动抢红包需要的除去timingIdentifier参数以外的参数，在拆红包响应方法里面从队列里面一个一个拿出保存的参数，拼接上 timingIdentifier上参数，调用抢红包的接口。
 
 
 %hook BaseMsgContentViewController
@@ -28,7 +30,7 @@
 - (void)onNewSyncAddMessage:(CMessageWrap *)msgWrap
 {
     //msgWrap里面有个字段type标示消息类型，type=49是红包消息
-    if (MSHookIvar<unsigned int>(msgWrap, "m_uiMessageType") == 49) {
+    if (MSHookIvar<unsigned int>(msgWrap, "m_uiMessageType") == 49 && [TDFDefaults boolForKey:TDFSWITCHKEY]) {
         //1
         WCPayInfoItem *payInfoItem = [msgWrap m_oWCPayInfoItem];
         NSString *c2cNativeUrl = [payInfoItem m_c2cNativeUrl];
@@ -53,8 +55,7 @@
         [mutable_dic setObject:[selfContact m_nsHeadImgUrl] forKey:@"headImg"];
         
         if (msgWrap) {
-            NSString *nativeUrl = c2cNativeUrl;
-            [mutable_dic setObject:nativeUrl forKey:@"nativeUrl"];
+            [mutable_dic setObject:c2cNativeUrl forKey:@"nativeUrl"];
         }
         
         //3
@@ -62,40 +63,32 @@
         if (nsUsrName) {
             [mutable_dic setObject:nsUsrName forKey:@"sessionUserName"];
         }
+        WeChatRedEnvelopParamQueue *paramQueue = [WeChatRedEnvelopParamQueue sharedQueue];
+        [mutable_dic setObject:@1 forKey:@"timingIdentifier"];
+        [paramQueue enqueue:mutable_dic];
         
         //拆红包
         //拼接拆红包参数
         NSMutableDictionary *params = [%c(NSMutableDictionary) dictionary];
         [params setObject:@"0" forKey:@"agreeDuty"];
-        [params setObject:@"1" forKey:@"inWay"];
+        if ([msgWrap.m_nsFromUsr rangeOfString:@"@chatroom"].location != NSNotFound) {
+            [params setObject:@"0" forKey:@"inWay"];//群红包
+        } else {
+            [params setObject:@"1" forKey:@"inWay"];//个人红包
+        }
         [params setObject:url_dic[@"channelid"] forKey:@"channelId"];
         [params setObject:@"1" forKey:@"msgType"];
-        [params setObject:c2cNativeUrl2 forKey:@"nativeUrl"];
+        [params setObject:c2cNativeUrl forKey:@"nativeUrl"];
         [params setObject:url_dic[@"sendid"] forKey:@"sendId"];
         //手动调用拆红包
         WCRedEnvelopesLogicMgr *redEnvelopesLogicMgr = [[%c(MMServiceCenter) defaultCenter] getService:[%c(WCRedEnvelopesLogicMgr) class]];
         [redEnvelopesLogicMgr ReceiverQueryRedEnvelopesRequest:params];
 
-        //4
-//        NSDictionary *m_dicBaseInfo = [m_data m_structDicRedEnvelopesBaseInfo];
-//        NSString *timingIdentifier = m_dicBaseInfo[@"timingIdentifier"];
-//        if ([timingIdentifier length]) {
-//            [mutable_dic setObject:timingIdentifier forKey:@"timingIdentifier"];
-//        }
-//
-//        WCPayLogicMgr *payLogic = [[%c(MMServiceCenter) defaultCenter] getService:[%c(WCPayLogicMgr) class]];
-//        [payLogic setRealnameReportScene:(unsigned int)1003];
-//        id subScript = [m_dicBaseInfo objectForKeyedSubscript:@"agree_duty"];
-//        [payLogic checkHongbaoOpenLicense:subScript acceptCallback:^(){
-//            WCRedEnvelopesLogicMgr *redEnvelopesLogicMgr = [[%c(MMServiceCenter) defaultCenter] getService:[%c(WCRedEnvelopesLogicMgr) class]];
-//            //真正开红包的请求
-//            [redEnvelopesLogicMgr OpenRedEnvelopesRequest:mutable_dic];
-//        } denyCallback:^(){
-//
-//        }];
     } else {
         NSLog(@"msgWrap--%@", msgWrap);
     }
+    
+    %orig;
 }
 %end
 
@@ -103,10 +96,12 @@
 //点击红包页面 开 按钮触发的方法
 - (void)OnOpenRedEnvelopes
 {
-    //通过分析汇编代码，恢复oc代码如下
-    NSDictionary *dict = MSHookIvar<NSDictionary *>(self, "m_dicBaseInfo");
-    WCRedEnvelopesReceiveControlLogic *delegate = MSHookIvar<WCRedEnvelopesReceiveControlLogic *>(self, "m_delegate");
-    [delegate WCRedEnvelopesReceiveHomeViewOpenRedEnvelopes];
+    %orig;
+    
+//    //通过分析汇编代码，恢复oc代码如下
+//    NSDictionary *dict = MSHookIvar<NSDictionary *>(self, "m_dicBaseInfo");
+//    WCRedEnvelopesReceiveControlLogic *delegate = MSHookIvar<WCRedEnvelopesReceiveControlLogic *>(self, "m_delegate");
+//    [delegate WCRedEnvelopesReceiveHomeViewOpenRedEnvelopes];
 }
 %end
 
@@ -189,12 +184,30 @@
 //自己抢过的红包     receiveStatus 2
 - (void)OnWCToHongbaoCommonResponse:(HongBaoRes *)arg1 Request:(id)arg2
 {
-//    %orig;
+    %orig;
     
     NSError *err;
     NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:arg1.retText.buffer options:NSJSONReadingMutableContainers error:&err];
-    if (arg1 && arg2 && arg1.cgiCmdid==3) {//没有被抢过的红吧
+    if (arg1 && arg2 && arg1.cgiCmdid==3 && [responseDict[@"receiveStatus"] integerValue]==0) {//没有被抢过的红吧
         NSString *timingIdentifier = responseDict[@"timingIdentifier"];
+        NSMutableDictionary *param = [[WeChatRedEnvelopParamQueue sharedQueue] dequeue];
+        if (param && timingIdentifier && param[@"timingIdentifier"]) {
+            [param setObject:timingIdentifier forKey:@"timingIdentifier"];
+            
+            //开始抢红包
+            WCRedEnvelopesLogicMgr *redEnvelopesLogicMgr = [[%c(MMServiceCenter) defaultCenter] getService:[%c(WCRedEnvelopesLogicMgr) class]];
+            
+            if ([TDFDefaults valueForKey:TDFTIMEKEY]) {//有延时时间
+                CGFloat time = ((NSString *)[TDFDefaults valueForKey:TDFTIMEKEY]).floatValue;
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    //真正开红包的请求
+                    [redEnvelopesLogicMgr OpenRedEnvelopesRequest:param];
+                });
+            } else {
+                //真正开红包的请求
+                [redEnvelopesLogicMgr OpenRedEnvelopesRequest:param];
+            }
+        }
     }
 }
 %end

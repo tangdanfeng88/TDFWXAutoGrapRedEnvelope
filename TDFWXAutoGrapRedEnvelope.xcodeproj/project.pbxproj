@@ -30,6 +30,8 @@
 		C258350C20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = C258350B20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.h */; };
 		C258350E20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = C258350D20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m */; };
 		C2876DAE20F9EB8B0020140D /* AutoGrabRedEnvelops.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2876DAD20F9EB8B0020140D /* AutoGrabRedEnvelops.mm */; };
+		C2876DB121037F290020140D /* WeChatRedEnvelopParamQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = C2876DAF21037F290020140D /* WeChatRedEnvelopParamQueue.h */; };
+		C2876DB221037F290020140D /* WeChatRedEnvelopParamQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C2876DB021037F290020140D /* WeChatRedEnvelopParamQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		C258350D20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDFWXAutoGrapRedEnvelopeDylib.m; sourceTree = "<group>"; };
 		C2876DAC20F9E9C40020140D /* AutoGrabRedEnvelops.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AutoGrabRedEnvelops.xm; sourceTree = "<group>"; };
 		C2876DAD20F9EB8B0020140D /* AutoGrabRedEnvelops.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AutoGrabRedEnvelops.mm; sourceTree = "<group>"; };
+		C2876DAF21037F290020140D /* WeChatRedEnvelopParamQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatRedEnvelopParamQueue.h; sourceTree = "<group>"; };
+		C2876DB021037F290020140D /* WeChatRedEnvelopParamQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatRedEnvelopParamQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,8 @@
 				C21700AA20E521C300FF0BE0 /* TDFSettingCell.mm */,
 				C2876DAC20F9E9C40020140D /* AutoGrabRedEnvelops.xm */,
 				C2876DAD20F9EB8B0020140D /* AutoGrabRedEnvelops.mm */,
+				C2876DAF21037F290020140D /* WeChatRedEnvelopParamQueue.h */,
+				C2876DB021037F290020140D /* WeChatRedEnvelopParamQueue.m */,
 			);
 			name = Logos;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2876DB121037F290020140D /* WeChatRedEnvelopParamQueue.h in Headers */,
 				C25834F120E2940500687A16 /* MDCycriptManager.h in Headers */,
 				C25834F520E2940500687A16 /* MDMethodTrace.h in Headers */,
 				C25834FE20E2940500687A16 /* LLDBTools.h in Headers */,
@@ -423,6 +430,7 @@
 				C25834EF20E2940500687A16 /* MDConfigManager.m in Sources */,
 				C2876DAE20F9EB8B0020140D /* AutoGrabRedEnvelops.mm in Sources */,
 				C258350020E2940500687A16 /* LLDBTools.mm in Sources */,
+				C2876DB221037F290020140D /* WeChatRedEnvelopParamQueue.m in Sources */,
 				C25834EA20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.mm in Sources */,
 				C258350E20E2940500687A16 /* TDFWXAutoGrapRedEnvelopeDylib.m in Sources */,
 				C25834F720E2940500687A16 /* MDMethodTrace.m in Sources */,
